@@ -15,5 +15,4 @@ let g:tex_conceal="adgms"
 
 set tabstop=4
 set shiftwidth=4
-set softtabstop=4
-set expandtab
+set softtabstop=0 noexpandtab
