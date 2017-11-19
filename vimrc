@@ -12,3 +12,8 @@ set encoding=utf-8
 set conceallevel=2
 set concealcursor=nvc
 let g:tex_conceal="adgms"
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
