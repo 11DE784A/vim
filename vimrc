@@ -6,6 +6,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vimwiki/vimwiki'
+Plugin 'reedes/vim-pencil'
 
 call vundle#end()
 
@@ -13,6 +14,7 @@ inoremap jk <ESC>
 let mapleader = "\<Space>"
 
 set confirm
+set hidden
 set showcmd
 set showmode
 
@@ -25,7 +27,7 @@ syntax on
 
 colorscheme gruvbox
 set background=dark
-let g:gruvbox_contrast_dark='soft'
+let g:gruvbox_contrast_dark='medium'
 
 set encoding=utf-8
 
