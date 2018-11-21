@@ -12,6 +12,12 @@ call vundle#end()
 
 inoremap jk <ESC>
 let mapleader = "\<Space>"
+nnoremap <leader>pp :w<CR>:!python %<CR>
+nnoremap <leader>ll :w<CR>:!latexmk -pdf %<CR>
+nnoremap <leader>lv :!zathura %:r.pdf &<CR><CR>
+nnoremap <leader>gg :w<CR> :!gnuplot %<CR>
+nnoremap <leader>cc :w<CR> :!g++ -o %:r.out %<CR>
+nnoremap <leader>cr :!./%:r.out<CR>
 
 set confirm
 set hidden
@@ -32,8 +38,8 @@ let g:gruvbox_contrast_dark='medium'
 set encoding=utf-8
 
 set conceallevel=2
-set concealcursor=nvc
-let g:tex_conceal="adgms"
+set concealcursor=c
+let g:tex_conceal="abdmgs"
 
 set tabstop=4
 set shiftwidth=4
