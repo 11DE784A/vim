@@ -12,6 +12,7 @@ call vundle#end()
 
 inoremap jk <ESC>
 let mapleader = "\<Space>"
+
 nnoremap <leader>pp :w<CR>:!python %<CR>
 nnoremap <leader>ll :w<CR>:!latexmk -pdf %<CR>
 nnoremap <leader>lv :!zathura %:r.pdf &<CR><CR>
@@ -28,7 +29,7 @@ set relativenumber
 set number
 set numberwidth=5
 
-filetype plugin indent on
+filetype indent plugin on
 syntax on
 
 colorscheme gruvbox
@@ -44,9 +45,14 @@ let g:tex_conceal="abdmgs"
 set tabstop=4
 set shiftwidth=4
 set softtabstop=0 noexpandtab
-
 set ignorecase
 set smartcase
+
+let wiki_1 = {}
+let wiki_1.path = '~/wiki/'
+let wiki_1.syntax = 'markdown'
+let wiki_1.ext = '.md'
+let g:vimwiki_list = [wiki_1]
 
 augroup resCur
   autocmd!
