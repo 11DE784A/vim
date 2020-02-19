@@ -1,18 +1,13 @@
 set nocompatible
 
-"Vundle stuff
-filetype off " required for Vundle
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'vimwiki/vimwiki'
-Plugin 'PegasusWang/vim-ubuntu-pastebin'
-Plugin 'rust-lang/rust.vim'
-
-call vundle#end()
-"End Vundle stuff
+" Plugins!
+call plug#begin('~/.vim/plugged')
+Plug 'vimwiki/vimwiki'
+Plug 'tpope/vim-surround'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'lervag/vimtex'
+Plug 'ajh17/VimCompletesMe'
+call plug#end()
 
 inoremap jk <ESC>
 let mapleader = "\<Space>"
@@ -42,15 +37,29 @@ set numberwidth=5
 filetype indent plugin on
 syntax on
 
-set termguicolors
+"set termguicolors
+if exists('+termguicolors')
+    let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
+
 colorscheme gruvbox
 set background=dark
 let g:gruvbox_contrast_dark='hard'
 
+highlight SpellBad cterm=underline
+highlight SpellCap cterm=underline
+highlight SpellLocal cterm=underline
+
 set encoding=utf-8
 
-set conceallevel=2
+set conceallevel=0
 set concealcursor=c
+
+let g:tex_flavor="latex"
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
 let g:tex_conceal="abdmgs"
 
 set tabstop=4
@@ -65,7 +74,10 @@ let wiki_1 = {}
 let wiki_1.path = '~/wiki/'
 let wiki_1.syntax = 'markdown'
 let wiki_1.ext = '.md'
+let wiki_1.auto_toc = 1
 let g:vimwiki_list = [wiki_1]
+let g:vimwiki_toc_header = 'Index'
+
 
 augroup resCur
   autocmd!

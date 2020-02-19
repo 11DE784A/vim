@@ -1,0 +1,1 @@
+/home/ayush/.vim/after/ftplugin/css.vim

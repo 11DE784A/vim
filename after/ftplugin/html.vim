@@ -6,5 +6,3 @@ setlocal autoindent
 setlocal smarttab
 setlocal formatoptions=croqlt
 setlocal textwidth=79
-
-nnoremap <leader>pp :w<CR>:!python %<CR>

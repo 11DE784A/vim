@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/ayush-s/Projects/python/Examples/word-play'
-let g:netrw_dirhist_2='/home/ayush-s/Projects/python/Examples'
-let g:netrw_dirhist_3='/home/ayush-s/Projects/python/Examples/word-play'
-let g:netrw_dirhist_4='/home/ayush-s/Projects/BEES/website/_posts'
-let g:netrw_dirhist_5='/home/ayush-s/Projects/BEES/website'
-let g:netrw_dirhist_6='/home/ayush-s/Projects/shitposts/subs/hitler'
